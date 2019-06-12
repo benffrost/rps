@@ -65,8 +65,24 @@ let GameState = {
     this.draw();
   },
 
-  aiChoice: function () {
-    return this.playOptions[Math.floor(Math.random() * 3)];
+  aiChoice: function (choice) {
+    if (Math.random() > 0.5) {
+      return this.playOptions[Math.floor(Math.random() * 3)];
+    }
+    else {                //cheat but not all the time so it isnt obvious
+      if (choice === "Rock") {
+        return "Paper";
+      }
+      else if (choice === "Scissors") {
+        return "Rock";
+      }
+      else {
+        return "Scissors";
+      }
+    }
+
+
+
   }
 }
 
