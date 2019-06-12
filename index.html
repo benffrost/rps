@@ -14,15 +14,15 @@
 	<!--write html below this line-->
 	<div class="container-fluid text-center">
 		<div class="row row-score">
-			<div class="col col-human">
+			<div class="col col-human mt-1">
 				<h1>Human</h1>
 			</div>
-			<div class="col col-ai">
+			<div class="col col-ai mt-1">
 				<h1>Computer</h1>
 			</div>
 		</div>
 		<div class="row row-score">
-			<div class="col col-human">
+			<div class="col col-human mt-1">
 				<h5 id="score-human">Wins: 0</h5>
 			</div>
 			<div class="col col-ai">
@@ -30,24 +30,24 @@
 			</div>
 		</div>
 		<div class="row row-playarea">
-			<div class="col-4 col-human">
+			<div class="col-4 col-human mt-1">
 				<h1 id="humanstate">?</h1>
 			</div>
-			<div class="col-4 col-ai">
+			<div class="col-4 col-ai mt-1">
 				<h1 id="winstate">beats?</h1>
 			</div>
-			<div class="col-4 col-ai">
+			<div class="col-4 col-ai mt-1">
 				<h1 id="aistate">?</h1>
 			</div>
 		</div>
 		<div class="row row-controls">
-			<div class="col-4"><button class="btn btn-primary btn-block" id="button_rock"
+			<div class="col-4 mt-1"><button class="btn btn-primary btn-block" id="button_rock"
 					onclick="GameState.play('Rock')">Rock</button></div>
-			<div class="col-4"><button class="btn btn-primary btn-block" id="button_paper"
+			<div class="col-4 mt-1"><button class="btn btn-primary btn-block" id="button_paper"
 					onclick="GameState.play('Paper')">Paper</button></div>
-			<div class="col-4"><button class="btn btn-primary btn-block" id="button_scissors"
+			<div class="col-4 mt-1"><button class="btn btn-primary btn-block" id="button_scissors"
 					onclick="GameState.play('Scissors')">Scissors</button></div>
-			<div class="col-12"><button class="btn btn-danger btn-block" id="button_reset"
+			<div class="col-12 mt-1"><button class="btn btn-danger btn-block" id="button_reset"
 					onclick="GameState.resetScore()">Reset</button></div>
 		</div>
 	</div>
