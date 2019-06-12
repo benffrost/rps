@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>SET THE TITLE!!!</title>
-	<!--Might be good to link bootstrap here-->
+	<title>RPS</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 	<!--write html below this line-->
-	
-	
+	<div class="container-fluid text-center">
+		<div class="row row-score">
+			<div class="col col-human">
+				<h1>Human</h1>
+			</div>
+			<div class="col col-ai">
+				<h1>Computer</h1>
+			</div>
+		</div>
+		<div class="row row-score">
+			<div class="col col-human">
+				<h5 id="score-human">Wins: 0</h5>
+			</div>
+			<div class="col col-ai">
+				<h5 id="score-ai">Wins: 0</h5>
+			</div>
+		</div>
+		<div class="row row-playarea">
+			<div class="col-4 col-human">
+				<h1 id="humanstate">?</h1>
+			</div>
+			<div class="col-4 col-ai">
+				<h1 id="winstate">beats?</h1>
+			</div>
+			<div class="col-4 col-ai">
+				<h1 id="aistate">?</h1>
+			</div>
+		</div>
+		<div class="row row-controls">
+			<div class="col-4"><button class="btn btn-primary btn-block" id="button_rock"
+					onclick="GameState.play('Rock')">Rock</button></div>
+			<div class="col-4"><button class="btn btn-primary btn-block" id="button_paper"
+					onclick="GameState.play('Paper')">Paper</button></div>
+			<div class="col-4"><button class="btn btn-primary btn-block" id="button_scissors"
+					onclick="GameState.play('Scissors')">Scissors</button></div>
+			<div class="col-12"><button class="btn btn-danger btn-block" id="button_reset"
+					onclick="GameState.resetScore()">Reset</button></div>
+		</div>
+	</div>
+
 	<!--write html above this line-->
 	<!--the following line is used to link your javascript file.-->
 	<script src="app.js"></script>
 </body>
+
 </html>
