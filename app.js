@@ -19,7 +19,7 @@ let GameState = {
   play: function (choice) {
 
     this.stateHuman = choice;
-    this.stateAI = this.aiChoice(); //todo: add randomization here
+    this.stateAI = this.aiChoice(choice); //todo: add randomization here
 
     if (this.stateHuman === this.stateAI) {
       this.stateWinner = this.winOptions[2];
