@@ -19,7 +19,7 @@ let GameState = {
   play: function (choice) {
 
     this.stateHuman = choice;
-    this.stateAI = this.aiChoice(choice); //todo: add randomization here
+    this.stateAI = this.aiChoice(choice);
 
     if (this.stateHuman === this.stateAI) {
       this.stateWinner = this.winOptions[2];
@@ -69,15 +69,15 @@ let GameState = {
     if (Math.random() > 0.5) {
       return this.playOptions[Math.floor(Math.random() * 3)];
     }
-    else {                //cheat but not all the time so it isnt obvious
+    else {                //cheat but not all the time so it isnt obvious; cheating still draws to make it even less obvious
       if (choice === "Rock") {
-        return "Paper";
+        return (Math.random() > 0.5) ? "Paper" : "Rock";
       }
       else if (choice === "Scissors") {
-        return "Rock";
+        return (Math.random() > 0.5) ? "Rock" : "Scissors";
       }
       else {
-        return "Scissors";
+        return (Math.random() > 0.5) ? "Scissors" : "Paper";
       }
     }
   },
