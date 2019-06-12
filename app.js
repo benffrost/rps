@@ -8,11 +8,11 @@ let GameState = {
   winsHuman: 0,
 
   draw: function () {
-    document.querySelector("#score-human").innerHTML = "Score: " + this.winsHuman;
-    document.querySelector("#score-ai").innerHTML = "Score: " + this.winsAI;
+    document.querySelector("#score-human").innerHTML = this.winsHuman.toString();
+    document.querySelector("#score-ai").innerHTML = this.winsAI.toString();
 
-    document.querySelector("#humanstate").innerHTML = this.stateHuman;
-    document.querySelector("#aistate").innerHTML = this.stateAI;
+    document.querySelector("#humanstate").innerHTML = this.stateToIcon(this.stateHuman);
+    document.querySelector("#aistate").innerHTML = this.stateToIcon(this.stateAI);
     document.querySelector("#winstate").innerHTML = this.stateWinner;
   },
 
@@ -80,10 +80,23 @@ let GameState = {
         return "Scissors";
       }
     }
+  },
 
-
-
+  stateToIcon: function (state) {
+    if (state === "Rock") {
+      return "<i class='fas fa-hand-rock'></i>";
+    }
+    else if (state === "Scissors") {
+      return "<i class='fas fa-hand-scissors'></i>";
+    }
+    else {
+      return "<i class='fas fa-hand-paper'></i>";
+    }
   }
+
+
+
 }
 
 GameState.draw();
+
